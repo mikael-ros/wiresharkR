@@ -58,12 +58,12 @@ library(tidyr)     #  -  tidying dataframes
 col.names <- c( "date", "time", "bytes" )  
 # Add colors for nth graph in each figure
                #Colorset (Line color, Fill color)
-colors <- list(c(         "#89664B",  "#79553A" ), c("#538E2A", "#649F3B")) 
+colors <- list(c(         "#538E2A",  "#649F3B"), c("#89664B", "#79553A")) 
 # Overlay opacity 
 opacity <- 0.4
 # Set dimensions for graph here
                 # Height, Width
-dimensions <-   c(5,      7)          
+dimensions <-   c(4,      7)          
 # Set unit prefix here
 unit <- 1000
 # Set interval here (in terms of seconds)
@@ -127,6 +127,7 @@ for (test in tests) {                                 # For every test
     color <- c("black", "darkgrey")                   # Default colors
     if (n <= length(colors) && length(test) != 1){    # If there are enough colors and it's not a single test
       color <- colors[[n]] }                          # Set the colors to  preferred otherwise default
+    print(paste("Test", test[n], "has colours", color[1], "and", color[2], sep=" "))
     plot <- plot + geom_area(                         # Adds another geom_area to the plot
       data   = read_test(test[n]),                    # Generate test data
       aes(x=datetime, y=bytes),                       # Sets what the axis' represent
