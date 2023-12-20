@@ -44,8 +44,3 @@ The R script processes all these files at once and categorizes them according to
 It then processes each subtype one by one for each test and adds it to each tests plot and then everything is saved.
 
 More information is available in the comments of the R-script
-
-# Known issues
-- [ ] Windows support
-- [ ] Interval likes to be 0.125, 0.250, 0.500, e.t.c. or the script doesn't behave correctly
-- [ ] No user help (no error messages or error handling)
