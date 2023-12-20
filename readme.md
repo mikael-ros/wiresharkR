@@ -41,8 +41,7 @@ COMMENT: the code is probably horrible, I haven't used R too much -- feel free t
 ## How does it work?
 The shell script first generates CSV files, with only two columns.
 The R script processes all these files at once and categorizes them according to testtype and splits them accordingly.
-
-	It then processes each subtype one by one for each test and adds it to each tests plot and then everything is saved.
+It then processes each subtype one by one for each test and adds it to each tests plot and then everything is saved.
 
 More information is available in the comments of the R-script
 
