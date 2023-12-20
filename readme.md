@@ -34,9 +34,9 @@ COMMENT: the code is probably horrible, I haven't used R too much -- feel free t
 	the [...] can be anything, the script uses "testtype" to identify the graphs to be stacked and subtype to sort them 
 
 ## How does it work?
-The shell script first generates CSV files, with only two columns
-The R script processes all these files at once and categorizes them according to testtype and splits them accordingly
-	It then processes each subtype one by one for each test and adds it to each tests plot and then everything is saved
+The shell script first generates CSV files, with only two columns.
+The R script processes all these files at once and categorizes them according to testtype and splits them accordingly.
+	It then processes each subtype one by one for each test and adds it to each tests plot and then everything is saved.
 
 More information is available in the comments of the R-script
 
