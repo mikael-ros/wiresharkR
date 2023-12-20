@@ -52,6 +52,7 @@ library(ggplot2)   #  -  plotting graphs
 library(stringr)   #  -  making titles
 library(lubridate) #  -  handling time
 library(tidyr)     #  -  tidying dataframes
+library(tracee)    #  -  watermarking
 
 ### Settings
 # The names of the columns (seperated by spaces in .csv file)
@@ -73,6 +74,8 @@ breaks <- "2 secs"
 # Set labels accordingly here
 xlab <- "Seconds"
 ylab <- "Kilobytes (per 125 milliseconds)"
+# Consent to watermark here
+watermark <- TRUE
 ###
 
 
@@ -122,6 +125,7 @@ for (test in tests) {                                 # For every test
   
   # Basic plot setup
   plot <- ggplot() + xlab(xlab) + ylab(ylab) + ggtitle(title) 
+  if (watermark == TRUE){plot <- plot + ggwater(text = "github/mikael-ros/wiresharkR", col="lightgrey", scale=0.1, alpha=0.4, rot=10)}
   
   for (n in length(test):1){                          # For every subtest
     color <- c("black", "darkgrey")                   # Default colors
