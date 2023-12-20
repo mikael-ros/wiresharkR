@@ -1,3 +1,5 @@
+Please consider referencing this script in your report so more people can get to know about it :)
+
 # Introduction
 This is a short and simple script I made to process some Wireshark data for a report
 on Minecraft's network usage, but I decided to share it in the hopes that others
